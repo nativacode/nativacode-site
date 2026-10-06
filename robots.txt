@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /nativacode-brand/
+
+Sitemap: https://nativacode.com.br/sitemap.xml
