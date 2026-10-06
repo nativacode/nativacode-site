@@ -391,7 +391,22 @@
         /* Hero */
         .hero { padding: 168px 0 104px; overflow: hidden; }
         .hero-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 56px; align-items: center; }
-        .hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.7rem); margin-bottom: 24px; max-width: 21ch; }
+        .hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); margin-bottom: 24px; max-width: 23ch; }
+
+        /* Frase que troca no fim do título: todas ocupam a mesma célula do grid,
+           então a altura é a da frase mais longa e o layout não pula */
+        .troca { display: grid; overflow: hidden; padding: 0.04em 0 0.14em; margin-bottom: -0.14em; }
+        .troca > span {
+            grid-area: 1 / 1;
+            align-self: start;
+            color: var(--ciano);
+            opacity: 0;
+            transform: translateY(110%);
+            transition: transform .9s cubic-bezier(.34, 1.45, .55, 1), opacity .5s ease;
+        }
+        .troca > span.saiu { transform: translateY(-110%); transition: transform .6s cubic-bezier(.6, 0, .4, 1), opacity .4s ease; }
+        .troca > span.ativa { opacity: 1; transform: none; }
+        .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         .hero .lead { margin-bottom: 36px; }
         .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px; }
         .microprova { display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--texto-escuro-2); }
@@ -773,7 +788,13 @@
             <div class="container hero-grid">
                 <div>
                     <span class="rotulo"><svg><use href="#folha"/></svg>Tecnologia que resolve</span>
-                    <h1>Seu processo vive em caderno, planilha e grupo de WhatsApp? A gente transforma isso <span class="destaque">num sistema que funciona.</span></h1>
+                    <h1>Seu processo vive em caderno, planilha e grupo de WhatsApp? A gente transforma isso <span class="so-leitor">num sistema que funciona.</span><span class="troca" aria-hidden="true">
+                        <span class="ativa">num sistema que funciona.</span>
+                        <span>num app que o cliente usa.</span>
+                        <span>numa automação que resolve.</span>
+                        <span>num site que traz cliente.</span>
+                        <span>num painel que mostra tudo.</span>
+                    </span></h1>
                     <p class="lead">Sistemas, apps e automações para pequenas empresas. Você fala direto com quem programa.</p>
                     <div class="hero-ctas">
                         <a class="btn btn-primario" data-wa="Oi! Vim pelo site da NativaCode e queria conversar sobre um projeto."><svg><use href="#i-whats"/></svg>Conversar no WhatsApp</a>
@@ -1209,6 +1230,20 @@
         };
         Object.values(campos).forEach(i => i.addEventListener('input', calcular));
         calcular();
+
+        // Frase do título que troca a cada 2,6s (fica parada com movimento reduzido)
+        const frases = [...document.querySelectorAll('.troca > span')];
+        if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            let atual = 0;
+            setInterval(() => {
+                if (document.hidden) return;
+                const proxima = (atual + 1) % frases.length;
+                frases.forEach(f => f.classList.remove('saiu'));
+                frases[atual].classList.replace('ativa', 'saiu');
+                frases[proxima].classList.add('ativa');
+                atual = proxima;
+            }, 2600);
+        }
 
         // Entrada suave das seções
         const observadorSurge = new IntersectionObserver(entradas => {
