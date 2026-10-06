@@ -1,0 +1,12 @@
+{
+  "name": "nativacode-site",
+  "compatibility_date": "2026-10-06",
+
+  // Site estático: só assets, sem `main`. Sem este arquivo o Cloudflare
+  // responde 404 com corpo vazio, porque o padrão de `not_found_handling`
+  // é "none". Com "404-page" ele entrega o 404.html da raiz.
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
