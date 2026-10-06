@@ -1,0 +1,36 @@
+# NativaCode
+
+> Software house de Blumenau (SC), Brasil. Desenvolve sistemas web, aplicativos iOS e Android, integrações e automações de WhatsApp sob medida para pequenas empresas. Atende presencialmente em Blumenau e no Vale do Itajaí e online no Brasil todo. Slogan: "Tecnologia que resolve".
+
+Fundador: Gustavo Stelle Cunha. O cliente fala direto com quem desenvolve o sistema.
+
+## Serviços
+
+- Sistemas web sob medida: pedidos, estoque, agenda e financeiro num lugar só, no computador e no celular.
+- Aplicativos iOS e Android, publicados na App Store e no Google Play.
+- Integrações e automações: WhatsApp, ERP, planilhas e site trocando dados sem digitação manual.
+
+## Como funciona
+
+1. Conversa de 30 minutos, grátis, por WhatsApp ou chamada. Às vezes a resposta é que não vale a pena fazer um sistema.
+2. Proposta por escrito com preço fechado em até 48h.
+3. Primeira versão funcionando em 2 a 3 semanas.
+4. Entrega com treinamento, suporte e 90 dias de garantia contra erros no que foi construído.
+
+## Preço
+
+Não há tabela. O preço é fechado antes de começar e pago por etapa entregue. Projetos menores, como uma automação ou integração, costumam começar em torno de R$ 3 mil. O código e os dados pertencem ao cliente.
+
+## Produto próprio: Navega Fácil
+
+Sistema de gestão de marinas desenvolvido pela NativaCode em Kotlin Multiplatform. O cliente da marina agenda navegações pelo celular com previsão do tempo; o pátio registra descida e subida das embarcações, fotos e consumo; o gestor fecha o caixa e acompanha estoque, mensalidades e relatórios. Publicado na App Store e no Google Play; a versão desktop é liberada no contrato.
+
+- [Site do Navega Fácil](https://xn--navegafcil-y4a.com)
+- [App Store](https://apps.apple.com/br/app/navega-f%C3%A1cil/id6807552938)
+- [Google Play](https://play.google.com/store/apps/details?id=br.com.nativacode.navegafacil)
+
+## Contato
+
+- [WhatsApp (47) 99665-0611](https://wa.me/5547996650611)
+- E-mail: nativacode@gmail.com
+- [Site](https://nativacode.com.br/)

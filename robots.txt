@@ -1,4 +1,19 @@
+# Buscadores e assistentes de IA podem ler o site inteiro.
 User-agent: *
+Allow: /
+Disallow: /nativacode-brand/
+
+# Crawlers de IA (busca e respostas): liberados explicitamente
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
 Allow: /
 Disallow: /nativacode-brand/
 
