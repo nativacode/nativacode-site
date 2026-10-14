@@ -1,0 +1,40 @@
+NATIVACODE — KIT DE MARCA (SVG)
+
+Todos os arquivos são vetoriais, com o texto convertido em curvas.
+Abrem e editam em Figma, Illustrator, Inkscape, Affinity e Canva,
+sem depender de fonte instalada.
+
+VARIAÇÕES DE COR (sufixo do arquivo)
+  -claro   fundo claro: tinta #121620 + ciano #0B8C82
+  -escuro  fundo escuro: branco #FFFFFF + ciano #14FFEC (fundo transparente)
+  -preto   1 cor preta
+  -branco  1 cor branca (fundo transparente)
+
+PASTAS
+  00-previews        visualização com fundo (só para conferir)
+  01-simbolo         só o N
+  02-logo-horizontal símbolo + nativacode
+  03-logo-com-slogan horizontal + "Tecnologia que resolve"
+  04-logo-vertical   símbolo em cima, nome embaixo
+  05-textos          wordmark e slogan isolados
+  06-icones          ícone de app / perfil (512x512, arredondado e quadrado)
+  07-adesivo-carro   @nativacode (proporção do adesivo de 60x15 cm)
+  08-cores           paleta
+  09-fontes          Sora e JetBrains Mono (licença OFL, uso livre)
+
+CAMADAS
+  Cada SVG tem grupos nomeados: "simbolo", "wordmark", "slogan" e "fundo".
+
+CORES
+  #14FFEC  Primária (destaque, em fundo escuro)
+  #0B8C82  Primária em fundo claro (textos e folha)
+  #121620  Tinta
+  #0C0F15  Noite (fundos escuros)
+  #F6F7F9  Fundo claro
+
+TIPOGRAFIA
+  nativa → Sora SemiBold | code → Sora Light | slogan → JetBrains Mono Regular, caixa alta, espaçamento largo
+
+ADESIVO DE VINIL DE RECORTE
+  Use os arquivos de 07-adesivo-carro. Cada cor é uma camada de vinil.
+  Para 1 cor só, use a versão -branco (vidro) ou -preto (pintura clara).
