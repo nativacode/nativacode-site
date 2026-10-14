@@ -1,6 +1,6 @@
 # NativaCode
 
-> Software house de Blumenau (SC), Brasil. Desenvolve sistemas web, aplicativos iOS e Android, integrações e automações de WhatsApp sob medida para pequenas empresas. Atende presencialmente em Blumenau e no Vale do Itajaí e online no Brasil todo. Slogan: "Tecnologia que resolve".
+> Software house de Blumenau (SC), Brasil. Desenvolve sistemas web, aplicativos iOS e Android, integrações e automações sob medida para empresas de todos os portes, do varejo à indústria. Atende presencialmente em Blumenau e no Vale do Itajaí e online no Brasil todo. Slogan: "Tecnologia que resolve".
 
 Fundador: Gustavo Stelle Cunha. O cliente fala direto com quem desenvolve o sistema.
 
@@ -8,18 +8,18 @@ Fundador: Gustavo Stelle Cunha. O cliente fala direto com quem desenvolve o sist
 
 - Sistemas web sob medida: pedidos, estoque, agenda e financeiro num lugar só, no computador e no celular.
 - Aplicativos iOS e Android, publicados na App Store e no Google Play.
-- Integrações e automações: WhatsApp, ERP, planilhas e site trocando dados sem digitação manual.
+- Integrações e automações: ERP, CRM, WhatsApp, planilhas e APIs trocando dados sem digitação manual. Integra qualquer sistema com API, banco de dados ou exportação de arquivo, inclusive ERPs como Totvs e SAP e sistemas legados sem documentação.
 
 ## Como funciona
 
-1. Conversa de 30 minutos, grátis, por WhatsApp ou chamada. Às vezes a resposta é que não vale a pena fazer um sistema.
+1. Reunião inicial sem custo e sem compromisso, presencial, por chamada ou WhatsApp. Às vezes a resposta é que não vale a pena fazer um sistema.
 2. Proposta por escrito com preço fechado em até 48h.
 3. Primeira versão funcionando em 2 a 3 semanas.
 4. Entrega com treinamento, suporte e 90 dias de garantia contra erros no que foi construído.
 
 ## Preço
 
-Não há tabela. O preço é fechado antes de começar e pago por etapa entregue. Projetos menores, como uma automação ou integração, costumam começar em torno de R$ 3 mil. O código e os dados pertencem ao cliente.
+Não há tabela. O preço é fechado antes de começar e pago por etapa entregue. Vai de uma automação pontual, a partir de R$ 3 mil, a sistemas que rodam a operação inteira, orçados depois da conversa. O código e os dados pertencem ao cliente, e os dados são tratados conforme a LGPD. A NativaCode assina acordo de confidencialidade (NDA) quando o cliente pede.
 
 ## Produto próprio: Navega Fácil
 
