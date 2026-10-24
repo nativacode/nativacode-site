@@ -3,8 +3,21 @@
   "configurations": [
     {
       "name": "site",
-      "url": "http://localhost:4321",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "-e",
+        "const h=require('http'),f=require('fs'),p=require('path'),r='/Users/mucher/Desktop/nativacode/nativacode-site',t={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.woff2':'font/woff2','.txt':'text/plain; charset=utf-8'};h.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]);if(u.endsWith('/'))u+='index.html';f.readFile(p.join(r,u),(e,b)=>{if(e){s.writeHead(404);return s.end('404')}s.writeHead(200,{'content-type':t[p.extname(u)]||'application/octet-stream'});s.end(b)})}).listen(4321)"
+      ],
       "port": 4321
+    },
+    {
+      "name": "aprovabox-demo",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd ../aprova-box && npm run demo -- --dev"
+      ],
+      "port": 3000
     }
   ]
 }

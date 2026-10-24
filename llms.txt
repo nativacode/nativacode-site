@@ -21,13 +21,23 @@ Fundador: Gustavo Stelle Cunha. O cliente fala direto com quem desenvolve o sist
 
 Não há tabela. O preço é fechado antes de começar e pago por etapa entregue. Vai de uma automação pontual, a partir de R$ 3 mil, a sistemas que rodam a operação inteira, orçados depois da conversa. O código e os dados pertencem ao cliente, e os dados são tratados conforme a LGPD. A NativaCode assina acordo de confidencialidade (NDA) quando o cliente pede.
 
-## Produto próprio: Navega Fácil
+## Produtos próprios
+
+A NativaCode desenvolve e mantém no ar produtos próprios, além dos projetos sob medida para clientes.
+
+### Navega Fácil
 
 Sistema de gestão de marinas desenvolvido pela NativaCode em Kotlin Multiplatform. O cliente da marina agenda navegações pelo celular com previsão do tempo; o pátio registra descida e subida das embarcações, fotos e consumo; o gestor fecha o caixa e acompanha estoque, mensalidades e relatórios. Publicado na App Store e no Google Play; a versão desktop é liberada no contrato.
 
 - [Site do Navega Fácil](https://xn--navegafcil-y4a.com)
 - [App Store](https://apps.apple.com/br/app/navega-f%C3%A1cil/id6807552938)
 - [Google Play](https://play.google.com/store/apps/details?id=br.com.nativacode.navegafacil)
+
+### AprovaBox
+
+Web app (PWA) de orçamentos para oficinas mecânicas e auto elétricas. O mecânico monta o orçamento no celular com catálogo de peças e mão de obra, fotos e desconto, e manda um link pelo WhatsApp. O cliente vê os itens, as fotos e o total e aprova com um toque. A oficina acompanha o serviço até a entrega, avisa o cliente quando o carro fica pronto e consulta o histórico de cada carro pela placa. Funciona em iPhone e Android pelo navegador, sem baixar da loja; o acesso é liberado pela NativaCode para cada oficina.
+
+- [AprovaBox](https://aprovabox.nativacode.com.br)
 
 ## Contato
 

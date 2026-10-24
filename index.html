@@ -150,7 +150,7 @@
         "@id": "https://nativacode.com.br/#empresa"
       },
       "inLanguage": "pt-BR",
-      "dateModified": "2026-10-14"
+      "dateModified": "2026-10-24"
     },
     {
       "@type": "SoftwareApplication",
@@ -165,6 +165,21 @@
         "https://apps.apple.com/br/app/navega-f%C3%A1cil/id6807552938",
         "https://play.google.com/store/apps/details?id=br.com.nativacode.navegafacil"
       ],
+      "author": {
+        "@id": "https://nativacode.com.br/#empresa"
+      },
+      "publisher": {
+        "@id": "https://nativacode.com.br/#empresa"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nativacode.com.br/#aprovabox",
+      "name": "AprovaBox",
+      "description": "Orçamentos para oficinas mecânicas e auto elétricas: o orçamento é montado no celular, enviado por link no WhatsApp e aprovado pelo cliente com um toque; o status do serviço é acompanhado até a entrega.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "url": "https://aprovabox.nativacode.com.br",
       "author": {
         "@id": "https://nativacode.com.br/#empresa"
       },
@@ -438,9 +453,14 @@
         .microprova span + span::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--ciano); margin-right: 12px; }
         .hero-visual { position: relative; display: flex; justify-content: center; }
         .hero-folha { position: absolute; width: 420px; right: -150px; top: -140px; opacity: 0.07; pointer-events: none; }
+        .hero-celulares { position: relative; width: 320px; height: 540px; }
+        .hero-celulares .celular { position: absolute; width: 205px; padding: 9px; border-radius: 32px; }
+        .hero-celulares .celular img { border-radius: 24px; }
+        .hero-celulares .celular:nth-child(1) { left: 0; top: 0; transform: rotate(-4deg); }
+        .hero-celulares .celular:nth-child(2) { right: 0; top: 76px; transform: rotate(4deg); }
         .hero-legenda { position: absolute; bottom: -34px; left: 50%; transform: translateX(-50%); white-space: nowrap; color: var(--texto-escuro-2); font-size: 0.7rem; }
 
-        /* Celular (moldura em CSS para os prints do Navega Fácil) */
+        /* Celular (moldura em CSS para os prints dos produtos) */
         .celular {
             width: 250px;
             border-radius: 38px;
@@ -574,8 +594,13 @@
         .etapa p { color: var(--texto-claro-2); }
         .etapa .prazo { display: inline-block; margin-top: 16px; padding: 6px 12px; border-radius: 999px; background: var(--branco); border: 1px solid var(--linha-claro); font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; color: var(--tinta); }
 
-        /* Navega Fácil */
+        /* Produtos nossos */
         .case { overflow: hidden; }
+        .produtos-topo { margin-bottom: 72px; }
+        .produto + .produto { margin-top: 104px; padding-top: 104px; border-top: 1px solid var(--linha-escuro); }
+        .produto h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; max-width: 22ch; }
+        .produto-invertido { grid-template-columns: 0.95fr 1.05fr; }
+        .produto-invertido .case-visual { order: -1; }
         .case-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
         .case-bloco { padding: 22px 0; border-bottom: 1px solid var(--linha-escuro); }
         .case-bloco:first-of-type { padding-top: 6px; }
@@ -796,7 +821,7 @@
             <a href="#inicio" class="logo" aria-label="NativaCode, início"><img src="assets/brand/logo.svg" alt="NativaCode" width="116" height="30"></a>
             <ul class="nav-links" id="menu">
                 <li><a href="#como-funciona">Como funciona</a></li>
-                <li><a href="#navega-facil">Navega Fácil</a></li>
+                <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#preco">Preço</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -827,15 +852,18 @@
                         <a class="btn btn-secundario" href="mailto:nativacode@gmail.com?subject=Agendar%20reuni%C3%A3o%20com%20a%20NativaCode&amp;body=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o.%0A%0AEmpresa%3A%0ACargo%3A%0AO%20que%20precisamos%20resolver%3A%0AMelhores%20dias%20e%20hor%C3%A1rios%3A%0A"><svg><use href="#i-agenda"/></svg>Agendar reunião</a>
                     </div>
                     <div class="microprova mono">
-                        <span>Navega Fácil na App Store e no Google Play</span>
+                        <span>2 produtos próprios no ar</span>
                         <span>Primeira versão em 2 a 3 semanas</span>
                         <span>Blumenau/SC</span>
                     </div>
                 </div>
                 <div class="hero-visual" aria-hidden="true">
                     <svg class="hero-folha" style="color: var(--ciano)"><use href="#folha"/></svg>
-                    <div class="celular"><img src="assets/img/navega-home.webp" alt="" width="540" height="1164" fetchpriority="high"></div>
-                    <span class="hero-legenda mono">Navega Fácil · feito pela NativaCode</span>
+                    <div class="hero-celulares">
+                        <div class="celular"><img src="assets/img/navega-home.webp" alt="" width="540" height="1164" fetchpriority="high"></div>
+                        <div class="celular"><img src="assets/img/aprovabox-cliente.webp" alt="" width="540" height="1164" fetchpriority="high"></div>
+                    </div>
+                    <span class="hero-legenda mono">Navega Fácil e AprovaBox · feitos pela NativaCode</span>
                 </div>
             </div>
         </section>
@@ -907,7 +935,7 @@
                         <div class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
                         <h3>Sistemas web</h3>
                         <p>Pedidos, estoque, agenda e financeiro num lugar só. Abre no computador e no celular.</p>
-                        <p class="exemplo"><svg style="color: var(--ciano)"><use href="#folha"/></svg>Ex.: pedido fechado pelo comercial que cai direto no planejamento da produção.</p>
+                        <p class="exemplo"><svg style="color: var(--ciano)"><use href="#folha"/></svg>Ex.: o AprovaBox, que monta o orçamento da oficina no celular.</p>
                     </article>
                     <article class="servico surge">
                         <div class="servico-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
@@ -961,47 +989,95 @@
             </div>
         </section>
 
-        <!-- 5. Navega Fácil -->
-        <section class="escuro case" id="navega-facil" data-wa-secao="Oi! Vi o Navega Fácil no site da NativaCode e queria conversar sobre um app para a minha empresa.">
-            <div class="container case-grid">
-                <div class="surge">
-                    <span class="rotulo"><svg><use href="#folha"/></svg>Produto nosso · Navega Fácil</span>
-                    <h2>Da prancheta da marina para a <span class="destaque">App Store e o Google Play.</span></h2>
+        <!-- 5. Produtos nossos -->
+        <section class="escuro case" id="produtos" data-wa-secao="Oi! Vi os produtos da NativaCode no site e queria conversar sobre um sistema para a minha empresa.">
+            <div class="container">
+                <div class="produtos-topo surge">
+                    <span class="rotulo"><svg><use href="#folha"/></svg>Feito pela NativaCode</span>
+                    <h2>Produtos nossos, <span class="destaque">no ar e em uso.</span></h2>
+                    <p class="lead">Antes de construir para a sua empresa, a gente construiu para nós. Cada um nasceu de um problema de quem trabalha no balcão e no pátio.</p>
+                </div>
 
-                    <div class="case-bloco">
-                        <span class="mono">O problema</span>
-                        <p>Marinas controlam agenda, pátio, combustível e a conta do cliente entre caderno, WhatsApp e sistema que trava. Uma das marinas que ouvimos resumiu assim: <q>cai e para a marina</q>.</p>
-                    </div>
-                    <div class="case-bloco">
-                        <span class="mono">O que a gente construiu</span>
-                        <ul class="case-lista">
-                            <li><svg><use href="#i-check-fino"/></svg><span><b>O cliente</b> agenda a navegação pelo celular, já vendo a previsão do tempo.</span></li>
-                            <li><svg><use href="#i-check-fino"/></svg><span><b>O pátio</b> desce e sobe a embarcação, tira fotos e lança combustível e produtos na conta.</span></li>
-                            <li><svg><use href="#i-check-fino"/></svg><span><b>O gestor</b> fecha o caixa em PIX, cartão ou dinheiro e acompanha estoque, mensalidades e relatórios.</span></li>
-                        </ul>
-                    </div>
-                    <div class="case-bloco" style="border-bottom: 0">
-                        <span class="mono">Onde está hoje</span>
-                        <div class="selos">
-                            <span class="selo">App Store</span>
-                            <span class="selo">Google Play</span>
-                            <span class="selo apagado">Desktop · liberado no contrato</span>
+                <article class="case-grid produto" id="navega-facil" data-wa-secao="Oi! Vi o Navega Fácil no site da NativaCode e queria conversar sobre um app para a minha empresa.">
+                    <div class="surge">
+                        <span class="rotulo"><svg><use href="#folha"/></svg>Navega Fácil · gestão de marinas</span>
+                        <h3>Da prancheta da marina para a <span class="destaque">App Store e o Google Play.</span></h3>
+
+                        <div class="case-bloco">
+                            <span class="mono">O problema</span>
+                            <p>Marinas controlam agenda, pátio, combustível e a conta do cliente entre caderno, WhatsApp e sistema que trava. Uma das marinas que ouvimos resumiu assim: <q>cai e para a marina</q>.</p>
                         </div>
-                        <p class="case-tech mono">Kotlin Multiplatform · um código para iOS, Android e desktop · funciona offline · tempo real</p>
-                    </div>
+                        <div class="case-bloco">
+                            <span class="mono">O que a gente construiu</span>
+                            <ul class="case-lista">
+                                <li><svg><use href="#i-check-fino"/></svg><span><b>O cliente</b> agenda a navegação pelo celular, já vendo a previsão do tempo.</span></li>
+                                <li><svg><use href="#i-check-fino"/></svg><span><b>O pátio</b> desce e sobe a embarcação, tira fotos e lança combustível e produtos na conta.</span></li>
+                                <li><svg><use href="#i-check-fino"/></svg><span><b>O gestor</b> fecha o caixa em PIX, cartão ou dinheiro e acompanha estoque, mensalidades e relatórios.</span></li>
+                            </ul>
+                        </div>
+                        <div class="case-bloco" style="border-bottom: 0">
+                            <span class="mono">Onde está hoje</span>
+                            <div class="selos">
+                                <span class="selo">App Store</span>
+                                <span class="selo">Google Play</span>
+                                <span class="selo apagado">Desktop · liberado no contrato</span>
+                            </div>
+                            <p class="case-tech mono">Kotlin Multiplatform · um código para iOS, Android e desktop · funciona offline · tempo real</p>
+                        </div>
 
-                    <div class="case-ctas">
-                        <a class="btn btn-primario" href="https://xn--navegafcil-y4a.com" target="_blank" rel="noopener">Conhecer o Navega Fácil<svg><use href="#i-seta"/></svg></a>
-                        <a class="btn btn-secundario btn-loja" href="https://apps.apple.com/br/app/navega-f%C3%A1cil/id6807552938" target="_blank" rel="noopener">App Store</a>
-                        <a class="btn btn-secundario btn-loja" href="https://play.google.com/store/apps/details?id=br.com.nativacode.navegafacil&amp;hl=pt_BR" target="_blank" rel="noopener">Google Play</a>
+                        <div class="case-ctas">
+                            <a class="btn btn-primario" href="https://xn--navegafcil-y4a.com" target="_blank" rel="noopener">Conhecer o Navega Fácil<svg><use href="#i-seta"/></svg></a>
+                            <a class="btn btn-secundario btn-loja" href="https://apps.apple.com/br/app/navega-f%C3%A1cil/id6807552938" target="_blank" rel="noopener">App Store</a>
+                            <a class="btn btn-secundario btn-loja" href="https://play.google.com/store/apps/details?id=br.com.nativacode.navegafacil&amp;hl=pt_BR" target="_blank" rel="noopener">Google Play</a>
+                        </div>
                     </div>
-                    <p class="case-nota">Esse é o nosso produto. Para a sua empresa, a gente constrói o sistema que ela precisa.</p>
-                </div>
-                <div class="case-visual surge" aria-hidden="true">
-                    <div class="celular"><img src="assets/img/navega-painel.webp" alt="" width="540" height="1164" loading="lazy"></div>
-                    <div class="celular"><img src="assets/img/navega-operacional.webp" alt="" width="540" height="1164" loading="lazy"></div>
-                    <svg class="folha-fundo" style="color: var(--ciano)"><use href="#folha"/></svg>
-                </div>
+                    <div class="case-visual surge" aria-hidden="true">
+                        <div class="celular"><img src="assets/img/navega-painel.webp" alt="" width="540" height="1164" loading="lazy"></div>
+                        <div class="celular"><img src="assets/img/navega-operacional.webp" alt="" width="540" height="1164" loading="lazy"></div>
+                        <svg class="folha-fundo" style="color: var(--ciano)"><use href="#folha"/></svg>
+                    </div>
+                </article>
+
+                <article class="case-grid produto produto-invertido" id="aprovabox" data-wa-secao="Oi! Vi o AprovaBox no site da NativaCode e queria usar na minha oficina.">
+                    <div class="surge">
+                        <span class="rotulo"><svg><use href="#folha"/></svg>AprovaBox · orçamentos para oficinas</span>
+                        <h3>Do orçamento no papel para o <span class="destaque">aprovado pelo WhatsApp.</span></h3>
+
+                        <div class="case-bloco">
+                            <span class="mono">O problema</span>
+                            <p>Na oficina, o orçamento sai no bloquinho ou numa mensagem solta no WhatsApp. O cliente demora a responder, o valor se perde no meio da conversa e ninguém sabe ao certo o que já foi aprovado.</p>
+                        </div>
+                        <div class="case-bloco">
+                            <span class="mono">O que a gente construiu</span>
+                            <ul class="case-lista">
+                                <li><svg><use href="#i-check-fino"/></svg><span><b>O mecânico</b> monta o orçamento no celular em menos de 2 minutos, com catálogo de peças e mão de obra, fotos e desconto.</span></li>
+                                <li><svg><use href="#i-check-fino"/></svg><span><b>O cliente</b> recebe um link pelo WhatsApp, vê os itens, as fotos e o total, e aprova com um toque.</span></li>
+                                <li><svg><use href="#i-check-fino"/></svg><span><b>O dono</b> acompanha o valor aprovado no mês, a taxa de aprovação e o histórico de cada carro pela placa.</span></li>
+                            </ul>
+                        </div>
+                        <div class="case-bloco" style="border-bottom: 0">
+                            <span class="mono">Onde está hoje</span>
+                            <div class="selos">
+                                <span class="selo">No ar</span>
+                                <span class="selo">iPhone e Android</span>
+                                <span class="selo apagado">Acesso liberado por oficina</span>
+                            </div>
+                            <p class="case-tech mono">Web app instalável (PWA) · sem baixar da loja · dados de cada oficina separados · fotos comprimidas no celular</p>
+                        </div>
+
+                        <div class="case-ctas">
+                            <a class="btn btn-primario" data-wa="Oi! Vi o AprovaBox no site da NativaCode e queria usar na minha oficina."><svg><use href="#i-whats"/></svg>Quero na minha oficina</a>
+                            <a class="btn btn-secundario btn-loja" href="https://aprovabox.nativacode.com.br" target="_blank" rel="noopener">Abrir o AprovaBox</a>
+                        </div>
+                    </div>
+                    <div class="case-visual surge" aria-hidden="true">
+                        <div class="celular"><img src="assets/img/aprovabox-painel.webp" alt="" width="540" height="1164" loading="lazy"></div>
+                        <div class="celular"><img src="assets/img/aprovabox-cliente.webp" alt="" width="540" height="1164" loading="lazy"></div>
+                        <svg class="folha-fundo" style="color: var(--ciano)"><use href="#folha"/></svg>
+                    </div>
+                </article>
+
+                <p class="case-nota surge" style="margin-top: 72px">Esses são os nossos produtos. Para a sua empresa, a gente constrói o sistema que ela precisa, do mesmo jeito.</p>
             </div>
         </section>
 
@@ -1169,11 +1245,10 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 class="footer-titulo">Produto</h2>
+                    <h2 class="footer-titulo">Produtos</h2>
                     <ul>
                         <li><a href="https://xn--navegafcil-y4a.com" target="_blank" rel="noopener">Navega Fácil</a></li>
-                        <li><a href="https://apps.apple.com/br/app/navega-f%C3%A1cil/id6807552938" target="_blank" rel="noopener">App Store</a></li>
-                        <li><a href="https://play.google.com/store/apps/details?id=br.com.nativacode.navegafacil&amp;hl=pt_BR" target="_blank" rel="noopener">Google Play</a></li>
+                        <li><a href="https://aprovabox.nativacode.com.br" target="_blank" rel="noopener">AprovaBox</a></li>
                     </ul>
                 </div>
             </div>
